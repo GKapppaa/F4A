@@ -3,15 +3,28 @@ function inyectarFooter(){
         <p>
             web peich do corxea
         </p>
+        <section id="footer-section">
+            <div class="pago">
+                <img src="" alt="paypal">
+            </div>
+        </section>
+
+        <div>
+            <p>El uso de la plataforma F4A Web implica la aceptación de los
+            #Términos y Condiciones</a>.
+            Puedes encontrar información sobre cómo procesamos tus datos personales
+            en la #Política de Privacidad</a> y la
+            #Política de Cookies</a>.</p>
+        </div>
     `;
 }
 function inyectarHeader(){
   document.getElementById("header").innerHTML = `
         <div class="header-top">
           <h1>
-              <span style="color: lightgreen">F</span>
-              <span style="color: white">4</span>
-              <span style="color: blue">A</span>
+            <a href="inicio">
+              <img class="logo" src="imagenes/logo.webp" alt="Tu tienda online">
+            </a>
           </h1>
           <form action="/buscar" method="GET">
               <label for="barra-busqueda">Buscar:</label>
