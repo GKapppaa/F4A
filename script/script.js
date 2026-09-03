@@ -11,10 +11,10 @@ function inyectarFooter(){
 
         <div>
             <p>El uso de la plataforma F4A Web implica la aceptación de los
-            #Términos y Condiciones</a>.
+            <a href="#">Términos y Condiciones</a>.
             Puedes encontrar información sobre cómo procesamos tus datos personales
-            en la #Política de Privacidad</a> y la
-            #Política de Cookies</a>.</p>
+            en la <a href="#">Política de Privacidad</a> y la
+            <a href="#">Política de Cookies</a>.</p>
         </div>
     `;
 }
@@ -26,7 +26,7 @@ function inyectarHeader(){
               <img class="logo" src="imagenes/logo.webp" alt="Tu tienda online">
             </a>
           </h1>
-          <form action="/buscar" method="GET">
+          <form class="form-buscar" action="/buscar" method="GET">
               <label for="barra-busqueda">Buscar:</label>
               <div class="buscar">
                 <input type="search" id="barra-busqueda" name="q" placeholder="Buscar...">
@@ -36,7 +36,7 @@ function inyectarHeader(){
 
           <div class="btn-extras">
             <button type="button" id="btn-regiones">ES / EUR</button>
-            <button type="button" id="btn-">
+            <button type="button" id="btn-"></button>
           </div>
         </div>
         <section>
