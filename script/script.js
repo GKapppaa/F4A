@@ -4,7 +4,7 @@ function inyectarHeader() {
     headerElement.innerHTML = `
           <div class="header-top">
             <h1>
-              <a href="inicio">
+              <a href="index.html">
                 <img class="logo" src="imagenes/logo.webp" alt="Tu tienda online">
               </a>
             </h1>
@@ -22,7 +22,7 @@ function inyectarHeader() {
             </div>
           </div>
           <section>
-              <a href="#">Gaming
+              <a href="gaming.html">Gaming</a>
               <a href="#">Software</a>
               <a href="#">Subscripciones</a>
               <a href="#">Regalos</a>
