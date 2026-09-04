@@ -23,8 +23,6 @@ function inyectarHeader() {
           </div>
           <section>
               <a href="#">Gaming
-
-              </a>
               <a href="#">Software</a>
               <a href="#">Subscripciones</a>
               <a href="#">Regalos</a>
@@ -66,3 +64,5 @@ document.addEventListener("DOMContentLoaded", () => {
   inyectarHeader();
   inyectarFooter();
 });
+
+const gamesContent = document.getElementById(games);
