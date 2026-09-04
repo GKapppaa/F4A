@@ -17,7 +17,7 @@ function inyectarHeader() {
             </form>
 
             <div class="btn-extras">
-              <button type="button" id="btn-regiones">ES / EUR</button>
+              <button type="button" id="btn-regiones"><img src="imagenes/pago/ee-uu-16px.webp" alt="ee-uu-16px">US / EUR <img src="imagenes/pago/european-union-16px.webp" alt="european-union-16px"></button>
               <button type="button" id="btn-"></button>
             </div>
           </div>
@@ -43,7 +43,11 @@ function inyectarFooter() {
         </p>
         <section id="footer-section">
             <div class="pago">
-                <img src="" alt="paypal">
+                <img src="imagenes/pago/paypal.webp" alt="paypal">
+                <img src="imagenes/pago/visa.webp" alt="visa">
+                <img src="imagenes/pago/mastercard.webp" alt="mastercard">
+                <img src="imagenes/pago/mercadopago.webp" alt="mercadopago">
+                <img src="imagenes/pago/webpay.webp" alt="webpay">
             </div>
         </section>
 
