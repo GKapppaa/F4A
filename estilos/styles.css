@@ -24,7 +24,7 @@ header {
     /* Fondo con degradado ascendente + imagen */
     background-image:
         linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent),
-        url('imagenes/gemini.webp');
+        url('/imagenes/gemini.webp');
 
     /* Configuración de posición y tamaño */
     background-size: cover;
