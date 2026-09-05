@@ -24,7 +24,7 @@ header {
     /* Fondo con degradado ascendente + imagen */
     background-image:
         linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent),
-        url('/imagenes/gemini.webp');
+        url('imagenes/gemini.webp');
 
     /* Configuración de posición y tamaño */
     background-size: cover;
@@ -218,6 +218,8 @@ header section a:hover {
     .header-top {
         flex-wrap: wrap;
         gap: 10px;
+        height: auto;
+        padding: 10px 0;
     }
 
     .form-buscar {
@@ -227,6 +229,12 @@ header section a:hover {
 
     .btn-extras {
         margin-left: auto;
+    }
+
+    #btn-login {
+        padding: 0 12px;
+        font-size: 0.85rem;
+        height: 36px;
     }
 
     header section {
@@ -239,5 +247,25 @@ header section a:hover {
 
     .contenedor-usuario {
         margin-left: 0;
+    }
+
+    .logo {
+        max-width: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-top {
+        gap: 8px;
+    }
+
+    #btn-login {
+        padding: 0 10px;
+        font-size: 0.8rem;
+        height: 34px;
+    }
+
+    .logo {
+        max-width: 80px;
     }
 }
