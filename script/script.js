@@ -17,15 +17,26 @@ function inyectarHeader() {
             </form>
 
             <div class="btn-extras">
-              <button type="button" id="btn-regiones">CLP<img src="imagenes/pago/chile.webp" alt="chile"> 
-                                                    / USD<img src="imagenes/pago/eeuu.webp" alt="eeuu"> 
+              <button type="button" id="btn-regiones">CLP<img src="imagenes/pago/chile.webp" alt="chile">
+                                                    / USD<img src="imagenes/pago/eeuu.webp" alt="eeuu">
                                                     / EUR <img src="imagenes/pago/euro.webp" alt="euro"></button>
-              <button type="button" id="btn-"></button>
+            </div>
+            <div class="contenedor-usuario">
+              <button type="button" id="btn-login">Acceder / Registro</button>
+              <div class="menu-desplegable oculto">
+                  <h3>Bienvenido!</h3>
+                  <button type="button" class="btn-social">Acceder Google</button>
+                  <button type="button"  class="btn-social">Acceder Facebook</button>
+                  <button type="button"  class="btn-social">Acceder Paypal</button>
+                  <button type="button" class="btn-login-principal">Acceder</button>
+                  <p>Al hacer clic en Continuar con Google, Facebook o PayPal, aceptas las condiciones de F4A <a href="#">Términos y Condiciones</a> y <a href="#">Política de Privacidad</a></p>
+                  <h3>¿No tienes una cuenta? <a href="#">Regístrate aquí</a></h3>
+              </div>
             </div>
           </div>
           <section>
               <a href="gaming.html">Gaming</a>
-              <a href="#">Software</a>
+              <a href="software.html">Software</a>
               <a href="#">Subscripciones</a>
               <a href="#">Regalos</a>
               <a href="#">Random Keys</a>
@@ -41,7 +52,7 @@ function inyectarFooter() {
   if (footerElement !== null) {
     footerElement.innerHTML = `
         <p>
-            web peich do corxea
+            F4A Web
         </p>
         <section id="footer-section">
             <div class="pago">
@@ -69,6 +80,20 @@ function inyectarFooter() {
 document.addEventListener("DOMContentLoaded", () => {
   inyectarHeader();
   inyectarFooter();
-});
 
-const gamesContent = document.getElementById(games);
+  const btnLogin = document.getElementById("btn-login");
+  const menuDesplegable = document.querySelector(".menu-desplegable");
+  const contenedorUsuario = document.querySelector(".contenedor-usuario");
+
+  if (btnLogin && menuDesplegable) {
+    btnLogin.addEventListener("click", () => {
+      menuDesplegable.classList.toggle("oculto");
+    });
+  }
+
+  document.addEventListener("click", (evento) => {
+    if (contenedorUsuario && !contenedorUsuario.contains(evento.target)) {
+      menuDesplegable.classList.add("oculto");
+    }
+  });
+});

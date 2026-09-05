@@ -1,0 +1,34 @@
+.btn-social,
+.btn-login-principal {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-login-principal{
+    background-color: #0070f3;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-login-principal:hover{
+    background-color: #005bb5;
+}
+
+.btn-login-principal:active{
+    transform: scale(0.98);
+}
+
+.btn-social {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #444444;
+}
+
+.btn-social:hover {
+    background-color: #383838;
+}

@@ -49,9 +49,11 @@
     overflow-x: auto;
     gap: 20px;
     scroll-snap-type: x mandatory;
-    padding-bottom: 15px;
+    padding: 15px 5px;
+
 }
 
+/* Le agregue box-shadow y transition para establecer un efecto al pasar el mouse por encima de la tarjeta */
 .tarjeta-software {
     flex: 0 0 220px;
     scroll-snap-align: start;
@@ -63,7 +65,13 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
-
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+/* Hover creado para darme el efecto de elevación al pasar el mouse por encima de la tarjeta */
+.tarjeta-software:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
 }
 
 .cuerpo h2 {
