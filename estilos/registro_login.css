@@ -1,34 +1,122 @@
-.btn-social,
-.btn-login-principal {
-    width: 100%;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+
+/* Login / Registro */
+.contenedor-usuario {
+    position: relative;
 }
 
-.btn-login-principal{
+#btn-login {
     background-color: #0070f3;
-    color: #ffffff;
+    color: white;
     border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    height: 40px;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s ease;
 }
 
-.btn-login-principal:hover{
+#btn-login:hover {
     background-color: #005bb5;
 }
 
-.btn-login-principal:active{
-    transform: scale(0.98);
+.menu-desplegable {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 280px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.menu-desplegable.oculto {
+    display: none;
+}
+
+.menu-desplegable h3 {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 4px;
 }
 
 .btn-social {
-    background-color: #2a2a2a;
-    color: #e0e0e0;
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 8px;
     border: 1px solid #444444;
+    background-color: #222222;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
 }
 
 .btn-social:hover {
-    background-color: #383838;
+    background-color: #333333;
+}
+
+.btn-login-principal {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: lightgreen;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-login-principal:hover {
+    background-color: #7dcd7d;
+}
+
+.menu-desplegable p {
+    font-size: 0.75rem;
+    color: #aaaaaa;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.menu-desplegable p a {
+    color: lightgreen;
+    text-decoration: none;
+}
+
+.menu-desplegable p a:hover {
+    text-decoration: underline;
+}
+
+.menu-registro {
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+
+.menu-registro a {
+    color: lightgreen;
+    text-decoration: none;
+}
+
+.menu-registro a:hover {
+    text-decoration: underline;
+}
+
+@media screen {
+
 }

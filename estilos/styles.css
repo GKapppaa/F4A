@@ -236,4 +236,8 @@ header section a:hover {
     header section a {
         font-size: 0.85rem;
     }
+
+    .contenedor-usuario {
+        margin-left: 0;
+    }
 }

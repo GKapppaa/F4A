@@ -30,7 +30,7 @@ function inyectarHeader() {
                   <button type="button"  class="btn-social">Acceder Paypal</button>
                   <button type="button" class="btn-login-principal">Acceder</button>
                   <p>Al hacer clic en Continuar con Google, Facebook o PayPal, aceptas las condiciones de F4A <a href="#">Términos y Condiciones</a> y <a href="#">Política de Privacidad</a></p>
-                  <h3>¿No tienes una cuenta? <a href="#">Regístrate aquí</a></h3>
+                  <h3 class="menu-registro">¿No tienes una cuenta? <a href="#">Regístrate aquí</a></h3>
               </div>
             </div>
           </div>
