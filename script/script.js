@@ -17,7 +17,9 @@ function inyectarHeader() {
             </form>
 
             <div class="btn-extras">
-              <button type="button" id="btn-regiones"><img src="imagenes/pago/ee-uu-16px.webp" alt="ee-uu-16px">US / EUR <img src="imagenes/pago/european-union-16px.webp" alt="european-union-16px"></button>
+              <button type="button" id="btn-regiones">CLP<img src="imagenes/pago/chile.webp" alt="chile"> 
+                                                    / USD<img src="imagenes/pago/eeuu.webp" alt="eeuu"> 
+                                                    / EUR <img src="imagenes/pago/euro.webp" alt="euro"></button>
               <button type="button" id="btn-"></button>
             </div>
           </div>

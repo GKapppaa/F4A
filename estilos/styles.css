@@ -21,6 +21,17 @@ header {
 
 /* Barra superior: logo | buscador | acciones */
 .header-top {
+    /* Fondo con degradado ascendente + imagen */
+    background-image:
+        linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent),
+        url('/imagenes/gemini.webp');
+
+    /* Configuración de posición y tamaño */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px;
+
     display: flex;
     align-items: center;
     gap: 16px;
@@ -37,7 +48,7 @@ header {
 }
 
 .logo {
-    max-width: 110px;
+    max-width: 130px;
     width: 100%;
     height: auto;
     display: block;
