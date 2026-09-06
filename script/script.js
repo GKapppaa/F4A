@@ -39,9 +39,9 @@ function inyectarHeader() {
           <section>
               <a href="gaming.html">Gaming</a>
               <a href="software.html">Software</a>
-              <a href="#">Subscripciones</a>
-              <a href="#">Regalos</a>
-              <a href="#">Random Keys</a>
+              <a href="subscripciones.html">Subscripciones</a>
+              <a href="regalos.html">Regalos</a>
+              <a href="randomkey.html">Random Keys</a>
           </section>
       `;
   }

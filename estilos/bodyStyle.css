@@ -137,9 +137,9 @@
 
 .hero-banner-img {
     width: 100%;
-    height: clamp(220px, 20vw, 320px);
+    height: clamp(200px, 20vw, 320px);
     display: block;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 
@@ -153,7 +153,7 @@
         font-size: 2rem;
     }
 
-    .cuerpo h3 {
+    .oferta {
         font-size: 0.95rem;
     }
 
@@ -161,4 +161,63 @@
         padding: 8px 16px;
         font-size: 0.9rem;
     }
+}
+
+/* === Estilos únicos por página === */
+
+/* Home — militar, oferta */
+#page-home .hero-banner::before {
+    background: linear-gradient(90deg, rgba(0,20,60,0.65) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%);
+}
+#page-home .contenido-banner h2 {
+    color: #ffcc00;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+/* Gaming — oscuro, urbano */
+#page-gaming .hero-banner::before {
+    background: linear-gradient(100deg, rgba(40,0,80,0.6) 0%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0) 100%);
+}
+#page-gaming .contenido-banner h2 {
+    color: #e84040;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.9);
+    font-style: italic;
+}
+#page-gaming .contenido-banner-btn {
+    background-color: #e84040;
+}
+#page-gaming .contenido-banner-btn:hover {
+    background-color: #c03030;
+}
+
+/* Software — tech, limpio */
+#page-software .hero-banner::before {
+    background: linear-gradient(90deg, rgba(0,30,80,0.55) 0%, rgba(0,80,160,0.15) 55%, rgba(0,0,0,0) 100%);
+}
+#page-software .contenido-banner h2 {
+    color: #00b4ff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+#page-software .contenido-banner-btn {
+    background-color: #00b4ff;
+}
+#page-software .contenido-banner-btn:hover {
+    background-color: #0090cc;
+}
+
+/* Subscripciones — fantasy, cálido */
+#page-subscripciones .hero-banner::before {
+    background: linear-gradient(90deg, rgba(60,20,0,0.6) 0%, rgba(0,0,0,0.15) 55%, rgba(0,0,0,0) 100%);
+}
+#page-subscripciones .contenido-banner h2 {
+    color: #ffaa00;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+#page-subscripciones .contenido-banner-btn {
+    background-color: #ff8c00;
+}
+#page-subscripciones .contenido-banner-btn:hover {
+    background-color: #cc7000;
 }
