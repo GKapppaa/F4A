@@ -37,17 +37,15 @@ function inyectarHeader() {
             </div>
           </div>
           <section>
-              <a href="gaming.html">Gaming</a>
-              <a href="software.html">Software</a>
-              <a href="#">Subscripciones</a>
-              <a href="#">Regalos</a>
-              <a href="#">Random Keys</a>
-          </section>
+              <a href="gaming.html">Gaming &#x1F3AE</a>
+              <a href="software.html">Software &#x1F4BB</a>
+              <a href="#">Subscripciones &#x1F4B3</a>
+              <a href="#">Regalos &#x1F381</a>
+              <a href="carrito.html">CARRITO &#x1F6D2</a>
+          </section> 
       `;
   }
 }
-
-
 
 function inyectarFooter() {
   const footerElement = document.getElementById("footer");
@@ -79,6 +77,7 @@ function inyectarFooter() {
     `;
   }
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   inyectarHeader();
   inyectarFooter();
@@ -99,3 +98,49 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+//------------------------
+// INICIO CARRITO
+//------------------------
+// Carga el carrito
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+function agregarAlCarrito(nombre, precio) {
+  const producto = { nombre, precio };
+
+  carrito.push(producto);
+  // Guardamos el arreglo actualizado en el almacenamiento del navegador
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+function mostrarItems() {
+  const lista = document.getElementById('lista-carrito');
+  const total = document.getElementById('total');
+
+  if (!lista || !total) return;
+
+  lista.innerHTML = '';
+  let totalAcumulado = 0;
+
+  carrito.forEach((item) => {
+    const li = document.createElement('li');
+    li.textContent = `${item.nombre} : $${item.precio}`;
+
+    lista.appendChild(li);
+
+    totalAcumulado += item.precio;
+  });
+
+  total.textContent = totalAcumulado;
+}
+
+function limpiar() {
+  carrito = [];
+  localStorage.removeItem('carrito');
+  mostrarItems();
+}
+
+// Ejecuta mostrarItems apenas la página cargue
+document.addEventListener('DOMContentLoaded', mostrarItems);
+//------------------------
+// FIN CARRITO
+//------------------------

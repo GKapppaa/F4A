@@ -39,6 +39,18 @@
     transition: background-color 0.2s ease;
 }
 
+.contenido-producto-btn:hover {
+    transform: translateY(-8px);
+    transition: 0.8s ease;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.contenido-producto-btn:active {
+    background-color: lightgreen;
+    transition: all;
+}
+
 .producto-precio {
     color: #ffcc00;
     font-size: 60px;
