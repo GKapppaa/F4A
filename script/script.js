@@ -42,12 +42,11 @@ function inyectarHeader() {
               <a href="subscripciones.html">Subscripciones</a>
               <a href="regalos.html">Regalos</a>
               <a href="randomkey.html">Random Keys</a>
+              <a href="carrito.html">Carrito</a>
           </section>
       `;
   }
 }
-
-
 
 function inyectarFooter() {
   const footerElement = document.getElementById("footer");
@@ -79,6 +78,7 @@ function inyectarFooter() {
     `;
   }
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   inyectarHeader();
   inyectarFooter();
@@ -99,3 +99,49 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+//------------------------
+// INICIO CARRITO
+//------------------------
+// Carga el carrito
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+function agregarAlCarrito(nombre, precio) {
+  const producto = { nombre, precio };
+
+  carrito.push(producto);
+  // Guardamos el arreglo actualizado en el almacenamiento del navegador
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+function mostrarItems() {
+  const lista = document.getElementById('lista-carrito');
+  const total = document.getElementById('total');
+
+  if (!lista || !total) return;
+
+  lista.innerHTML = '';
+  let totalAcumulado = 0;
+
+  carrito.forEach((item) => {
+    const li = document.createElement('li');
+    li.textContent = `${item.nombre} : $${item.precio}`;
+
+    lista.appendChild(li);
+
+    totalAcumulado += item.precio;
+  });
+
+  total.textContent = totalAcumulado;
+}
+
+function limpiar() {
+  carrito = [];
+  localStorage.removeItem('carrito');
+  mostrarItems();
+}
+
+// Ejecuta mostrarItems apenas la página cargue
+document.addEventListener('DOMContentLoaded', mostrarItems);
+//------------------------
+// FIN CARRITO
+//------------------------

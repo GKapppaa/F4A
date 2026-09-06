@@ -1,0 +1,11 @@
+.resumen {
+    border: #000 solid;
+    width: clamp(15.625rem, 13.16rem + 10.377vw, 22.5rem);
+    /*height: clamp(15.625rem, 13.16rem + 10.377vw, 22.5rem);*/
+    height: clamp(1rem, -26.634rem + 73.69vw, 39.688rem);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+}
