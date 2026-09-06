@@ -68,6 +68,14 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
+
+.tarjeta-software a {
+    text-decoration: none;
+    /* Elimina el subrayado */
+    color: inherit;
+    /* Mantiene el color de la fuente */
+}
+
 /* Hover creado para darme el efecto de elevación al pasar el mouse por encima de la tarjeta */
 .tarjeta-software:hover {
     transform: translateY(-8px);
