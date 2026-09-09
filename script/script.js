@@ -42,7 +42,7 @@ function inyectarHeader() {
                 <button type="button" class="btn-social">Acceder Paypal</button>
 
                 <p>Al hacer clic en Continuar...</p>
-                <h3 class="menu-registro">¿No tienes cuenta? <a href="#">Regístrate aquí</a></h3>
+                <h3 class="menu-registro">¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></h3>
               </div>
             </div>
             </div>
@@ -104,6 +104,23 @@ document.addEventListener("DOMContentLoaded", () => {
       // validacion y Bienvenido
       if (email === 'admin@gmail.com' && password === '123') {
         alert('Bienvenido administrador');
+      }
+    });
+  }
+
+  const formRegistro = document.getElementById("form-registro");
+  if (formRegistro) {
+    formRegistro.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre-registro').value;
+      const apellido = document.getElementById('apellido-registro').value;
+      const email = document.getElementById('email-registro').value;
+      const password = document.getElementById('password-registro').value;
+      // validacion y Bienvenido
+      if (nombre === '' || apellido === '' || email === '' || password === '') {
+        alert('Por favor, complete todos los campos');
+      } else {
+        alert('Bienvenido ' + nombre + ' ' + apellido);
       }
     });
   }

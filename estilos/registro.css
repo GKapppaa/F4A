@@ -1,0 +1,33 @@
+#form-registro{
+    background-color: aliceblue;
+    padding: 20px 10px;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+#form-registro h2{
+    text-align: center;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font: 0.95rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 5px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+}
