@@ -5,12 +5,42 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Randomkey</title>
 	<link rel="stylesheet" href="estilos/styles.css">
+	<link rel="stylesheet" href="estilos/bodyStyle.css">
 	<link rel="stylesheet" href="estilos/registro_login.css">
 </head>
-<body>
+<body id="page-randomkey">
     <header id="header">
 
     </header>
+
+    <main class="cuerpo">
+        <section class="hero-banner">
+            <img src="imagenes/banner_randomkey.webp" alt="random-key" class="hero-banner-img">
+            <div class="contenido-banner">
+                <h3 class="oferta">Sorpresa</h3>
+                <h2>Llévate lo que sea</h2>
+                <a href="index.html" class="contenido-banner-btn">Probar suerte</a>
+            </div>
+        </section>
+
+        <section class="seccion-software">
+            <div class="b-soft">
+                <h3>Keys al azar</h3>
+            </div>
+            <div class="carrusel-software">
+                <article class="tarjeta-software">
+                    <div>
+                        <img src="imagenes/randomkey.webp" alt="Random Key">
+                    </div>
+                        <div class="tarjeta">
+                        <h3>Random Key</h3>
+                        <p class="precio">$5.000</p>
+                        <button type="button" onclick="agregarAlCarrito(this, 'Random Key', 5000)">🛒</button>
+                        </div>
+                </article>
+            </div>
+        </section>
+    </main>
 
     <footer id="footer">
 

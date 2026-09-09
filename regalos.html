@@ -5,12 +5,62 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Regalos</title>
 	<link rel="stylesheet" href="estilos/styles.css">
+	<link rel="stylesheet" href="estilos/bodyStyle.css">
 	<link rel="stylesheet" href="estilos/registro_login.css">
 </head>
-<body>
+<body id="page-regalos">
     <header id="header">
 
     </header>
+
+    <main class="cuerpo">
+        <section class="hero-banner">
+            <img src="imagenes/banner_tarjetaRegalo.webp" alt="tarjeta-regalo" class="hero-banner-img">
+            <div class="contenido-banner">
+                <h3 class="oferta">La mejor elección</h3>
+                <h2>Regalos perfectos</h2>
+                <a href="index.html" class="contenido-banner-btn">Ver opciones</a>
+            </div>
+        </section>
+
+        <section class="seccion-software">
+            <div class="b-soft">
+                <h3>Tarjetas de regalo</h3>
+            </div>
+            <div class="carrusel-software">
+                <article class="tarjeta-software">
+                    <div>
+                        <img src="imagenes/MinecraftLogo.webp" alt="Minecraft">
+                    </div>
+                        <div class="tarjeta">
+                        <h3>Minecraft</h3>
+                        <p class="precio">$10.000</p>
+                        <button type="button" onclick="agregarAlCarrito(this, 'Minecraft', 10000)">🛒</button>
+                        </div>
+                </article>
+                <article class="tarjeta-software">
+                    <div>
+                        <img src="imagenes/R6Game.webp" alt="Rainbow Six">
+                    </div>
+                        <div class="tarjeta">
+                        <h3>Rainbow Six Siege</h3>
+                        <p class="precio">$15.000</p>
+                        <button type="button" onclick="agregarAlCarrito(this, 'Rainbow Six Siege', 15000)">🛒</button>
+                        </div>
+                </article>
+                <article class="tarjeta-software">
+                    <div>
+                        <img src="imagenes/yt_music.webp" alt="YouTube Music">
+                    </div>
+                        <div class="tarjeta">
+                        <h3>YouTube Music</h3>
+                        <p class="precio">$4.990</p>
+                        <button type="button" onclick="agregarAlCarrito(this, 'YouTube Music', 4990)">🛒</button>
+                        </div>
+                </article>
+            </div>
+        </section>
+    </main>
 
     <footer id="footer">
 

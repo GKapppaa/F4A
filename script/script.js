@@ -24,18 +24,28 @@ function inyectarHeader() {
             <div class="contenedor-usuario">
               <button type="button" id="btn-login">Acceder</button>
               <div class="menu-desplegable oculto">
+
+                <!-- FORMULARIO de email + contraseña -->
+                <form id="form-login">
                   <h3>Bienvenido!</h3>
-                  <button type="button" class="btn-social">Acceder Google</button>
-                  <button type="button"  class="btn-social">Acceder Facebook</button>
-                  <button type="button"  class="btn-social">Acceder Paypal</button>
-                  <a href="index.html">
-                      <button type="button" class="btn-login-principal">Acceder</button>
-                  </a>
-                  <p>Al hacer clic en Continuar con Google, Facebook o PayPal, aceptas las condiciones de F4A <a href="#">Términos y Condiciones</a> y <a href="#">Política de Privacidad</a></p>
-                  <h3 class="menu-registro">¿No tienes una cuenta? <a href="#">Regístrate aquí</a></h3>
+                  <input type="email" id="login-email" placeholder="Email" required>
+                  <input type="password" id="login-password" placeholder="Contraseña" required>
+                  <button type="submit" class="btn-login-principal">Acceder</button>
+                  <a href="#" type="button">  '¿Olvidaste tu contraseña?</a>
+                </form>
+
+                <div class="separador">o</div>
+
+                <!-- BOTONES SOCIALES — fuera del form -->
+                <button type="button" class="btn-social">Acceder Google</button>
+                <button type="button" class="btn-social">Acceder Facebook</button>
+                <button type="button" class="btn-social">Acceder Paypal</button>
+
+                <p>Al hacer clic en Continuar...</p>
+                <h3 class="menu-registro">¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></h3>
               </div>
             </div>
-          </div>
+            </div>
           <section>
               <a href="gaming.html">Gaming</a>
               <a href="software.html">Software</a>
@@ -110,6 +120,38 @@ document.addEventListener("DOMContentLoaded", () => {
   inyectarHeader();
   inyectarFooter();
 
+
+  // Script para el formulario de login
+  const formLogin = document.getElementById("form-login");
+  if (formLogin) {
+    formLogin.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+      // validacion y Bienvenido
+      if (email === 'admin@gmail.com' && password === '123') {
+        alert('Bienvenido administrador');
+      }
+    });
+  }
+
+  const formRegistro = document.getElementById("form-registro");
+  if (formRegistro) {
+    formRegistro.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre-registro').value;
+      const apellido = document.getElementById('apellido-registro').value;
+      const email = document.getElementById('email-registro').value;
+      const password = document.getElementById('password-registro').value;
+      // validacion y Bienvenido
+      if (nombre === '' || apellido === '' || email === '' || password === '') {
+        alert('Por favor, complete todos los campos');
+      } else {
+        alert('Bienvenido ' + nombre + ' ' + apellido);
+      }
+    });
+  }
+
   const btnLogin = document.getElementById("btn-login");
   const menuDesplegable = document.querySelector(".menu-desplegable");
   const contenedorUsuario = document.querySelector(".contenedor-usuario");
@@ -132,12 +174,20 @@ document.addEventListener("DOMContentLoaded", () => {
 // Carga el carrito
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-function agregarAlCarrito(nombre, precio) {
-  const producto = { nombre, precio };
+function agregarAlCarrito(boton, nombre, precio) {
+  const imagen = boton.dataset.imagen;
+  const producto = { nombre, precio, imagen };
 
   carrito.push(producto);
   // Guardamos el arreglo actualizado en el almacenamiento del navegador
   localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+function eliminarDelCarrito(index) {
+  carrito.splice(index, 1); // Remueve 1 elemento en la posición index
+  // Guardamos el estado actualizado en localStorage
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+  mostrarItems();           // Vuelve a renderizar la lista actualizada
 }
 
 function mostrarItems() {
@@ -149,10 +199,26 @@ function mostrarItems() {
   lista.innerHTML = '';
   let totalAcumulado = 0;
 
-  carrito.forEach((item) => {
+  carrito.forEach((item, index) => {
     const li = document.createElement('li');
-    li.textContent = `${item.nombre} : $${item.precio}`;
+    li.className = 'item-carrito';
 
+    const img = document.createElement('img');
+    img.src = item.imagen;
+    img.alt = item.nombre;
+    img.className = 'img-carrito';
+
+    const spanTexto = document.createElement('span');
+    spanTexto.textContent = `${item.nombre} : $${item.precio} `;
+
+    const botonEliminar = document.createElement('button');
+    botonEliminar.textContent = 'x';
+    botonEliminar.className = 'btn-eliminar';
+    botonEliminar.onclick = () => eliminarDelCarrito(index);
+
+    li.appendChild(img);
+    li.appendChild(spanTexto);
+    li.appendChild(botonEliminar);// Insertamos el botón dentro del <li> antes de agregarlo a la lista
     lista.appendChild(li);
 
     totalAcumulado += item.precio;

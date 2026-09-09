@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="estilos/bodyStyle.css">
     <link rel="stylesheet" href="estilos/registro_login.css">
     <link rel="stylesheet" href="estilos/detalleProducto.css">
+    <link rel="stylesheet" href="estilos/carrito.css">
 </head>
 
 <body>
@@ -17,11 +18,11 @@
     </header>
 
     <main class="cuerpo">
-        <div class="resumen">
-            <h4>Resumen de tu Carrito</h4>
-            <p>Total items:</p>
-            <ul id="lista-carrito"></ul>
-            <p>Total a Pagar : $<span id="total">0</span> CLP</p><br>
+        <div class="seccion-producto">
+            <h4>Resumen de tu Carrito</h4><br>
+
+            <ul id="lista-carrito"></ul><br>
+            <p class="total-a-pagar">Total a Pagar : $<span id="total">0</span> CLP</p><br>
             <button onclick="limpiar()">Limpiar</button>
 
         </div>

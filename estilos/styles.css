@@ -19,12 +19,13 @@ header {
     width: 100%;
 }
 
+
 /* Barra superior: logo | buscador | acciones */
 .header-top {
     /* Fondo con degradado ascendente + imagen */
     background-image:
         linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent),
-        url('/imagenes/gemini.webp');
+        url('../imagenes/gemini.webp');
 
     /* Configuración de posición y tamaño */
     background-size: cover;
@@ -108,11 +109,33 @@ header {
     justify-content: center;
 }
 
+#form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#login-email, #login-password{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    font-size: 0.9rem;
+}
+
+#login-email:focus, #login-password:focus{
+    outline: none;
+    border-color: lightgreen;
+}
+
 .btn-extras {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 8px;
+    margin-left: auto;
 }
 
 .btn-extras button:empty {
@@ -306,7 +329,80 @@ header section a:hover {
         height: 34px;
     }
 
+    #btn-regiones {
+        font-size: 0.7rem;
+        padding: 0 10px;
+        height: 34px;
+    }
+
     .logo {
         max-width: 80px;
+    }
+}
+
+@media (max-width: 375px) {
+    .header-top {
+        gap: 6px;
+        padding: 8px 0;
+    }
+
+    header section {
+        gap: 10px;
+    }
+
+    header section a {
+        font-size: 0.75rem;
+    }
+
+    #btn-login {
+        padding: 0 8px;
+        font-size: 0.75rem;
+        height: 32px;
+        border-radius: 16px;
+    }
+
+    #btn-regiones {
+        font-size: 0.65rem;
+        padding: 0 6px;
+        height: 32px;
+        border-radius: 16px;
+    }
+
+    .logo {
+        max-width: 70px;
+    }
+
+    .contenedor-usuario {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .header-top {
+        gap: 4px;
+    }
+
+    header section {
+        gap: 8px;
+    }
+
+    header section a {
+        font-size: 0.7rem;
+    }
+
+    #btn-login {
+        padding: 0 6px;
+        font-size: 0.7rem;
+        height: 30px;
+    }
+
+    #btn-regiones {
+        font-size: 0.6rem;
+        padding: 0 4px;
+        height: 30px;
+    }
+
+    .logo {
+        max-width: 60px;
     }
 }
