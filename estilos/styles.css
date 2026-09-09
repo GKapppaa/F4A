@@ -256,7 +256,80 @@ header section a:hover {
         height: 34px;
     }
 
+    #btn-regiones {
+        font-size: 0.7rem;
+        padding: 0 10px;
+        height: 34px;
+    }
+
     .logo {
         max-width: 80px;
+    }
+}
+
+@media (max-width: 375px) {
+    .header-top {
+        gap: 6px;
+        padding: 8px 0;
+    }
+
+    header section {
+        gap: 10px;
+    }
+
+    header section a {
+        font-size: 0.75rem;
+    }
+
+    #btn-login {
+        padding: 0 8px;
+        font-size: 0.75rem;
+        height: 32px;
+        border-radius: 16px;
+    }
+
+    #btn-regiones {
+        font-size: 0.65rem;
+        padding: 0 6px;
+        height: 32px;
+        border-radius: 16px;
+    }
+
+    .logo {
+        max-width: 70px;
+    }
+
+    .contenedor-usuario {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .header-top {
+        gap: 4px;
+    }
+
+    header section {
+        gap: 8px;
+    }
+
+    header section a {
+        font-size: 0.7rem;
+    }
+
+    #btn-login {
+        padding: 0 6px;
+        font-size: 0.7rem;
+        height: 30px;
+    }
+
+    #btn-regiones {
+        font-size: 0.6rem;
+        padding: 0 4px;
+        height: 30px;
+    }
+
+    .logo {
+        max-width: 60px;
     }
 }

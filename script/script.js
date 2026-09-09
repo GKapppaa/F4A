@@ -24,18 +24,27 @@ function inyectarHeader() {
             <div class="contenedor-usuario">
               <button type="button" id="btn-login">Acceder</button>
               <div class="menu-desplegable oculto">
+
+                <!-- FORMULARIO de email + contraseña -->
+                <form id="form-login">
                   <h3>Bienvenido!</h3>
-                  <button type="button" class="btn-social">Acceder Google</button>
-                  <button type="button"  class="btn-social">Acceder Facebook</button>
-                  <button type="button"  class="btn-social">Acceder Paypal</button>
-                  <a href="index.html">
-                      <button type="button" class="btn-login-principal">Acceder</button>
-                  </a>
-                  <p>Al hacer clic en Continuar con Google, Facebook o PayPal, aceptas las condiciones de F4A <a href="#">Términos y Condiciones</a> y <a href="#">Política de Privacidad</a></p>
-                  <h3 class="menu-registro">¿No tienes una cuenta? <a href="#">Regístrate aquí</a></h3>
+                  <input type="email" id="login-email" placeholder="Email" required>
+                  <input type="password" id="login-password" placeholder="Contraseña" required>
+                  <button type="submit" class="btn-login-principal">Acceder</button>
+                  <a href="#" type="button">  '¿Olvidaste tu contraseña?</a>
+                </form>
+
+                <div class="separador">o</div>
+
+                <!-- BOTONES SOCIALES — fuera del form -->
+                <button type="button" class="btn-social">Acceder Google</button>
+                <button type="button" class="btn-social">Acceder Facebook</button>
+                <button type="button" class="btn-social">Acceder Paypal</button>
+
+                <p>Al hacer clic en Continuar...</p>
+                <h3 class="menu-registro">¿No tienes cuenta? <a href="#">Regístrate aquí</a></h3>
               </div>
             </div>
-          </div>
           <section>
               <a href="gaming.html">Gaming</a>
               <a href="software.html">Software</a>
