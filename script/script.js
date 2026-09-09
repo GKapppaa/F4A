@@ -52,29 +52,56 @@ function inyectarFooter() {
   const footerElement = document.getElementById("footer");
   if (footerElement !== null) {
     footerElement.innerHTML = `
-        <p>
-            F4A Web
-        </p>
-        <section id="footer-section">
-            <div class="pago">
-                <img src="imagenes/pago/paypal.webp" alt="paypal">
-                <img src="imagenes/pago/visa.webp" alt="visa">
-                <img src="imagenes/pago/mastercard.webp" alt="mastercard">
-                <img src="imagenes/pago/mercadopago.webp" alt="mercadopago">
-                <img src="imagenes/pago/webpay.webp" alt="webpay">
+        <section id="footer-titulo">
+          <a href="index.html">
+            <img class="logo" src="imagenes/logo.webp" alt="Tu tienda online">
+          </a>
+        </section>
+
+        <section id="footer-columnas">
+            <div class="columna">
+              <H3>F4A WEB</H3>
+                <ul>
+                  <li><a href="quienes-somos.html">Quiénes somos</a></li>
+                  <li><a href="nosotros.html">Nosotros</a></li>
+                  <li><a href="terminos.html">Términos y Condiciones</a></li>
+                  <li><a href="privacidad.html">Privacidad</a></li>
+                </ul>
+            </div>
+
+            <div class="columna">
+              <H3>CATEGORÍAS</H3>
+                <ul>
+                  <li><a href="gaming.html">Gaming</a></li>
+                  <li><a href="software.html">Software</a></li>
+                  <li><a href="subscripciones.html">Subscripciones</a></li>
+                  <li><a href="regalos.html">Regalos</a></li>
+                </ul>
+            </div>
+
+            <div class="columna">
+              <H3>AYUDA</H3>
+                <ul>
+                  <li><a href="contacto.html">Contacto</a></li>
+                  <li><a href="faqs.html">FAQs</a></li>
+                  <li><a href="politica-cookies.html">Política Cookies</a></li>
+                </ul>
             </div>
         </section>
 
-        <div>
-            <p>El uso de la plataforma F4A Web implica la aceptación de los
-            <a href="#">Términos y Condiciones</a>.
+        <section id="footer-section">
+            <div class="pago">
+              <img src="imagenes/pago/paypal.webp" alt="paypal">
+              <img src="imagenes/pago/visa.webp" alt="visa">
+              <img src="imagenes/pago/mastercard.webp" alt="mastercard">
+              <img src="imagenes/pago/mercadopago.webp" alt="mercadopago">
+              <img src="imagenes/pago/webpay.webp" alt="webpay">
+            </div>
+        </section>
 
-            Puedes encontrar información sobre cómo procesamos tus datos personales
-            en la <a href="#">Política de Privacidad</a>
-
-            y la
-            <a href="#">Política de Cookies</a>.</p>
-        </div>
+        <section id="footer-copyright">
+          <p>&copy; 2026 F4A Web. Todos los derechos reservados</p>
+        </section>
     `;
   }
 }

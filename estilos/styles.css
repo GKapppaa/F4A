@@ -164,6 +164,21 @@ header section a:hover {
     padding: 20px 16px;
 }
 
+#footer-titulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-columnas {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
 #footer-section {
     display: flex;
     flex-wrap: wrap;
@@ -171,6 +186,21 @@ header section a:hover {
     justify-content: center;
     gap: 16px;
     margin-bottom: 16px;
+}
+
+.columna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.columna {
+    text-align: center;      /* Centra los títulos y las listas de cada columna */
+}
+
+.columna h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
 }
 
 .pago {
@@ -196,7 +226,7 @@ header section a:hover {
 }
 
 #footer a {
-    color: lightgreen;
+    color: white;
     text-decoration: none;
 }
 
@@ -204,7 +234,27 @@ header section a:hover {
     text-decoration: underline;
 }
 
+.titulo-pagina {
+    color: #4CAF50;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
 /* Responsive */
+@media (max-width: 768px) {
+    /* AJUSTES PARA EL FOOTER RESPONSIVO */
+    #footer-columnas {
+        flex-direction: column; /* Apila las columnas una debajo de otra */
+        align-items: center;    /* Centra el contenido */
+        gap: 24px;              /* Separa las columnas verticalmente */
+        padding: 10px 0;
+    }
+
+    .columna ul li {
+        margin-bottom: 8px;     /* Separa los enlaces para tocarlos fácilmente en móviles */
+    }
+}
+
 @media (max-width: 768px) {
     .header-top {
         flex-wrap: wrap;
