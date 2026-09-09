@@ -45,6 +45,7 @@ function inyectarHeader() {
                 <h3 class="menu-registro">¿No tienes cuenta? <a href="#">Regístrate aquí</a></h3>
               </div>
             </div>
+            </div>
           <section>
               <a href="gaming.html">Gaming</a>
               <a href="software.html">Software</a>
@@ -91,6 +92,21 @@ function inyectarFooter() {
 document.addEventListener("DOMContentLoaded", () => {
   inyectarHeader();
   inyectarFooter();
+
+
+  // Script para el formulario de login
+  const formLogin = document.getElementById("form-login");
+  if (formLogin) {
+    formLogin.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('login-email').value;
+      const password = document.getElementById('login-password').value;
+      // validacion y Bienvenido
+      if (email === 'admin@gmail.com' && password === '123') {
+        alert('Bienvenido administrador');
+      }
+    });
+  }
 
   const btnLogin = document.getElementById("btn-login");
   const menuDesplegable = document.querySelector(".menu-desplegable");

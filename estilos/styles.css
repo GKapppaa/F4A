@@ -19,12 +19,13 @@ header {
     width: 100%;
 }
 
+
 /* Barra superior: logo | buscador | acciones */
 .header-top {
     /* Fondo con degradado ascendente + imagen */
     background-image:
         linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent),
-        url('/imagenes/gemini.webp');
+        url('../imagenes/gemini.webp');
 
     /* Configuración de posición y tamaño */
     background-size: cover;
@@ -108,11 +109,33 @@ header {
     justify-content: center;
 }
 
+#form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#login-email, #login-password{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    font-size: 0.9rem;
+}
+
+#login-email:focus, #login-password:focus{
+    outline: none;
+    border-color: lightgreen;
+}
+
 .btn-extras {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 8px;
+    margin-left: auto;
 }
 
 .btn-extras button:empty {
