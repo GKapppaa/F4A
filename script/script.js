@@ -105,12 +105,20 @@ document.addEventListener("DOMContentLoaded", () => {
 // Carga el carrito
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-function agregarAlCarrito(nombre, precio) {
-  const producto = { nombre, precio };
+function agregarAlCarrito(boton, nombre, precio) {
+  const imagen = boton.dataset.imagen;
+  const producto = { nombre, precio, imagen };
 
   carrito.push(producto);
   // Guardamos el arreglo actualizado en el almacenamiento del navegador
   localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+function eliminarDelCarrito(index) {
+  carrito.splice(index, 1); // Remueve 1 elemento en la posición index
+  // Guardamos el estado actualizado en localStorage
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+  mostrarItems();           // Vuelve a renderizar la lista actualizada
 }
 
 function mostrarItems() {
@@ -122,10 +130,26 @@ function mostrarItems() {
   lista.innerHTML = '';
   let totalAcumulado = 0;
 
-  carrito.forEach((item) => {
+  carrito.forEach((item, index) => {
     const li = document.createElement('li');
-    li.textContent = `${item.nombre} : $${item.precio}`;
+    li.className = 'item-carrito';
 
+    const img = document.createElement('img');
+    img.src = item.imagen;
+    img.alt = item.nombre;
+    img.className = 'img-carrito';
+
+    const spanTexto = document.createElement('span');
+    spanTexto.textContent = `${item.nombre} : $${item.precio} `;
+
+    const botonEliminar = document.createElement('button');
+    botonEliminar.textContent = 'x';
+    botonEliminar.className = 'btn-eliminar';
+    botonEliminar.onclick = () => eliminarDelCarrito(index);
+
+    li.appendChild(img);
+    li.appendChild(spanTexto);
+    li.appendChild(botonEliminar);// Insertamos el botón dentro del <li> antes de agregarlo a la lista
     lista.appendChild(li);
 
     totalAcumulado += item.precio;
