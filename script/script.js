@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const email = document.getElementById('login-email').value;
       const password = document.getElementById('login-password').value;
       // validacion y Bienvenido
-      if (email === 'admin@gmail.com' && password === '123') {
+      if (email === 'admin@gmail.com' && password === usuarios.) {
         alert('Bienvenido administrador');
       }
     });
@@ -167,6 +167,14 @@ document.addEventListener("DOMContentLoaded", () => {
       menuDesplegable.classList.add("oculto");
     }
   });
+
+  // Agregando localStorage para usuarios
+  const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+  usuarios.push({ nombre, email, password, rol });
+  localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+  const existe = usuarios.find(u => u.email === email && u.password === password);
 });
 //------------------------
 // INICIO CARRITO
