@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - F4A</title>
+    <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="estilos/bodyStyle.css">
+    <link rel="stylesheet" href="estilos/registro_login.css">
+    <link rel="stylesheet" href="estilos/admin.css">
+</head>
+<body>
+    <header id="header"></header>
+
+    <main class="cuerpo">
+        <a href="index.html" class="btn-back">← Volver al inicio</a>
+
+        <div class="admin-container">
+            <h1 class="admin-title">Panel de Administrador</h1>
+
+            <div class="admin-section">
+                <h3>Agregar producto</h3>
+                <form class="admin-form" id="form-agregar">
+                    <input type="text" id="producto-nombre" placeholder="Nombre del producto" required>
+                    <input type="number" id="producto-precio" placeholder="Precio" required>
+                    <input type="text" id="producto-imagen" placeholder="Ruta de imagen" required>
+                    <button type="submit" class="btn-add">Agregar</button>
+                </form>
+            </div>
+
+            <div class="admin-section">
+                <h3>Productos en el carrito</h3>
+                <ul class="product-list" id="lista-productos"></ul>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer"></footer>
+
+    <script src="script/script.js"></script>
+    <script src="script/scriptAdmin.js"></script>
+</body>
+</html>
